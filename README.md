@@ -6,24 +6,27 @@
 </h4>
 
 
+<br>
+
+*Le document complet proposé par Cyprien est disponible en prévisualisation [ici](https://github.com/RemiHiya/LaxtexCompendium/blob/main/latexresume.tex).*
   
 
 # Commandes git
 
 | **commande**                             |               **utilité**               |
 |:-----------------------------------------|:---------------------------------------:|
-| git add "fichier"                        | permet d’ajouter le fichier dans le git |
-| git commit -m "message"                  | creer une version et ajouter un message |
-| git status                               |      affiche l’état de la version       |
+| git init                                 |  Crée un nouveau répertoire git         |
+| git add "fichier"                        | Ajoute le fichier au suivi de git       |
+| git commit -m "message"                  | Crée une nouvelle version avec un message |
+| git status                               |      Affiche le statut du répo          |
 | git log                                  |      affiche la liste des versions      |
-| git init                                 |  demande a git de suivre le repertoire  |
 | git diff \[fichier\]                     |  affiche les modification d’un fichier  |
 | rm -fr .git                              |            supprimer le git             |
 | git config –global user.name/email       |    modifier le nom de l’utilisateur     |
 | git commit –amend –reset-author –no-edit |      appliquer les modif ci dessus      |
 | git push                                 |       envoyer l’update à git lab        |
 | git pull                                 |      recevoir l’update de git lab       |
-| git clone "url"                          |     clone le git lab sur notre git      |
+| git clone "url"                          |  clone le repo dans le dossier courant  |
 
 
 # .gitignore typique pour Latex
