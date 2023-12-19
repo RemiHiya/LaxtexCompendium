@@ -1,0 +1,471 @@
+\documentclass[french,titlepage] {article}
+%twocolumn
+%12pt
+\usepackage [] {babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[]{blindtext}
+
+%maths
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%maths
+
+
+%href
+%%%\usepackage[]{hyperref}
+%href
+
+%theoremes
+\newtheorem {theorem}{Théorème}
+%theoremes
+
+%creer des commandes + font
+\usepackage[]{lmodern}
+
+
+\newcommand{\strong}[1]{\mathversion{bold}{\textbf{#1}}}
+
+\newcommand{\ecole}{\Huge U \huge n \LARGE i \Large v \large e \normalsize r \small s \footnotesize i \scriptsize t \tiny é
+\Huge C \huge l \LARGE e \Large r \large m \normalsize o \small n \scriptsize t \tiny - \Huge A \huge u \LARGE v \Large e \large r \normalsize g \small n \footnotesize e \scriptsize !}
+
+\newcommand{\texta}[1]{\tiny{#1}}
+\newcommand{\textb}[1]{\scriptsize{#1}}
+\newcommand{\textc}[1]{\footnotesize{#1}}
+\newcommand{\textd}[1]{\small{#1}}
+\newcommand{\texte}[1]{\normalsize{#1}}
+\newcommand{\textf}[1]{\large{#1}}
+\newcommand{\textg}[1]{\Large{#1}}
+\newcommand{\texth}[1]{\LARGE{#1}}
+\newcommand{\texti}[1]{\huge{#1}}
+\newcommand{\textj}[1]{\Huge{#1}}
+%creer des commandes
+
+
+
+%liens colorées
+\usepackage[]{xcolor}
+\usepackage[]{soul}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\newcommand{\surligne}[2][pink]{\sethlcolor{#1} \hl{#2}}
+\newcommand {\myname} {Cyprien Jullien \xspace}
+\newcommand{\mystyle}[2][]{{#1#2}}
+\newcommand{\name}[2]{\textcolor{gray}{#1}\textcolor{red}{#2}}
+%liens colorées
+
+
+%lstset
+
+\usepackage[]{listings}
+\usepackage[]{graphicx}
+
+\lstset{language=BASH,frame=single, basicstyle=\sffamily,morekeywords=nano,tabsize=2,morekeywords=status,morekeywords=commit,morekeywords=touch,morekeywords=add,morekeywords=clone,morekeywords=push,gobble=0,columns=fixed]
+}
+%lstset
+
+
+\title{bienvenue dans le giga résumé}
+\author{ Cyprien JULLIEN}
+\date{décembre 2023}
+
+\begin{document} %début de l'environement document
+
+
+\maketitle 
+\setcounter{tocdepth}{6}
+\tableofcontents
+
+\section{découverte}
+language est:
+\languagename
+
+titlepage permet de creer une page entiere dédier au titre
+twocolumn permet de séparer son texte en 2 sur une page
+\blindtext 
+
+
+\section{maths}
+
+\eqref{equation}
+
+Un peu de maths
+ 
+$3-2+4 \geq 2$
+
+2{10}=1024
+
+$a1,a2\ldots an$
+
+$2^{10} \leq 1024 \times 2 \times 3 \cdots \times 4$
+
+
+$— les quantificateurs : \exists et \forall ;
+— les relations \neq, \equiv, \iff 13 \sim, et \hookrightarrow ;
+— les fonctions et opérateurs \cos, \sin, \tan et \lim ;
+— le constructeur de fraction \frac qui prend deux arguments et que nous
+avons vu en cours-td ;
+— des constantes, comme \infty.$
+
+
+bonus package:
+$\nleq, \ngeq et \implies$ 
+
+\begin{equation}
+\forall k \leq n, k \textbf{est un diviseur de} n!
+\end{equation}
+
+\begin{equation}
+e = mc^2 \label{equation}
+\end{equation}
+
+\begin{equation}
+\lim_{\theta \to (\frac{\pi}{2} ) }
+\tan ( \theta ) = \infty
+\end{equation}
+
+\subsection{dernier exo}
+\Large Que signifient les formules suivantes ?
+\begin{enumerate}
+\normalsize 
+\item $\forall x \in P, \exists y \in P, x \hookrightarrow y$
+\item $\forall x \in P, \exists y \in P, y \hookrightarrow x$
+\item $\exists x \in P, \exists y \in P, x \hookrightarrow y$
+\item $\exists x \in P, \forall y \in P, x \hookrightarrow y$
+\item $\exists x \in P, x \hookrightarrow y$
+
+\Large Comment exprimer les assertions suivantes ?
+\normalsize 
+\item Toute personne admet un père.
+\item Certaines personnes sont pères de plusieurs autres.
+\item Aucune personne n’a deux pères.
+\item Personne n’est le père de son père.
+\item La négation de l’assertion 6.
+\end{enumerate}
+
+
+Réponses:
+\Large Que signifient les formules suivantes ?
+\begin{enumerate}
+\normalsize 
+\item Toutes personne admet un fils 
+\item Toutes personne admet un père 
+\item Certaines personnes admet un père
+\item Tout fils à un père
+\item Il existe des père
+
+\Large Comment exprimer les assertions suivantes ?
+\normalsize 
+\item $\forall x \in P, \exists y \in P, y \hookrightarrow x$
+\item $\exists x \in P, \exists y \in P,\exists z \in P, x \hookrightarrow y,x \hookrightarrow z$
+\item $\forall y \in P, \forall x \in P, x \hookrightarrow y$
+\item $\forall x \in P, \exists y \in P, x \hookrightarrow y$
+\item $\forall x \in P, \exists y \in P, y non \hookrightarrow x$
+
+\end{enumerate}
+
+\section{href et sections}
+
+Mais nous verrons ceci plus tard dans 
+\ref{sectionettiquete}
+\subsubsection{sous-sous sec}
+\blindtext
+
+Mais nous verrons ceci plus tard dans \ref{sectionettiquete}
+
+\subsection{sous sec}
+
+\label{sectionettiquete}
+\url{https://fr.wikipedia.org/wiki/Lorem_ipsum}
+avec le lien 
+
+\href{https://fr.wikipedia.org/wiki/Lorem_ipsum}{ou en clickant ici}
+
+
+\section{itemize}
+
+\label{ref2}
+\ref{ref2}
+\begin{itemize}
+\item test
+\item test
+\item test
+\end{itemize}
+\begin{enumerate}
+\item test
+\item test
+\item test
+\end{enumerate}
+\begin{description}
+\item test
+\item{super} test
+\item test
+\end{description}
+
+
+
+\section{equations}
+$ \mathbb{N} = [1,2,3,...]$
+
+\begin{theorem}[Pour tout entier naturel n, la somme des n premiers entiers
+naturels est égal à la moitié du produit de n par $(n  -  1)$.]
+
+\begin{proof}
+Soit $ n\in\mathbb { N } $ .
+Notons $ S_n $ la somme des $ n $ premiers entiers naturels .
+Alors :
+\begin{align*}
+S_n & = \sum_ { i = 0 } ^ { n - 1 } i
+= 0 + 1 + \cdots + ( n - 2) + ( n - 1)
+& \text { pardé finition } \\
+& = \sum_ { i = 0 } ^ { n - 1 } ( n - 1 - i )
+= ( n - 1) + ( n - 2) + \cdots + 1 + 0
+& \text { par commutativit é } \\
+\end{align*}
+En sommant les deux formes de la somme $ S_n $ donn é es ci - dessus,
+nous pouvons obtenir :
+\label{1ererep}
+\begin{align*}
+2 \times S_n
+& = \left ( \sum_ { i = 0 } ^ { n - 1 } i\right )
++ \left ( \sum_ { i = 0 } ^ { n - 1 } ( n - 1 - i ) \right ) \\
+& = \sum_ { i = 0 } ^ { n - 1 } ( i + ( n - 1 - i ))
+& \text { par associativit é et commutativit é } \\
+& = Sn = \frac {n \times(n - 1)}{2} 
+\end{align*}
+\emph{ Réponse  }
+$Sn = \frac {n \times(n - 1)}{2} $
+\end{proof}
+
+
+
+
+\end{theorem}
+
+\begin{theorem}(version textuelle).Pour tout entier naturel n, la somme des n premiers entiers
+naturels est égal à la moitié du produit de n par $(n  -  1)$.]
+\begin{equation}
+S_n  = \sum_ { i = 0 } ^ { n - 1 } i
+= 0 + 1 + \cdots + ( n - 2) + ( n - 1)
+ \text { pardé finition } \\
+ = \sum_ { i = 0 } ^ { n - 1 } ( n - 1 - i )
+= ( n - 1) + ( n - 2) + \cdots + 1 + 0
+ \text { par commutativit é } \\
+\end{equation}
+
+\begin{equation*}
+2 \times S_n
+ = \left ( \sum_ { i = 0 } ^ { n - 1 } i\right )
++ \left ( \sum_ { i = 0 } ^ { n - 1 } ( n - 1 - i ) \right ) \\
+ = \sum_ { i = 0 } ^ { n - 1 } ( i + ( n - 1 - i ))
+ \text { par associativit é et commutativit é } \\
+ = Sn = \frac {n \times(n - 1)}{2} 
+\end{equation*}
+
+Initialisation: Cas n = 0 \\
+Hérédité:\\
+On sait que Pn est vrai, c'est a dire...\\
+Montrons que Pn+1 est vrai, c'est a dire..\\
+Conclusion:\\
+Donc d'après le principe de récurrence Pn+1 est vrai pour tout i appartenant à R
+
+
+
+\end{theorem}
+
+\begin{theorem}(version textuelle).Pour tout entier naturel n, la somme des n premiers entiers
+\begin{equation}
+S_n  = \sum_ { i = 0 } ^ { n - 1 } i
+= 0 + 1 + \cdots + ( n - 2) + ( n - 1)
+ \text { pardé finition } \\
+ = \sum_ { i = 0 } ^ { n - 1 } ( n - 1 - i )
+= ( n - 1) + ( n - 2) + \cdots + 1 + 0
+ \text { par commutativit é } \\
+\end{equation}
+
+\begin{equation*}
+2 \times S_n
+ = \left ( \sum_ { i = 0 } ^ { n - 1 } i\right )
++ \left ( \sum_ { i = 0 } ^ { n - 1 } ( n - 1 - i ) \right ) \\
+ = \sum_ { i = 0 } ^ { n - 1 } ( i + ( n - 1 - i ))
+ \text { par associativit é et commutativit é } \\
+ = Sn = \frac {n \times(n - 1)}{2} 
+\end{equation*}
+ou la retrouver ici --> \ref{1ererep}
+\end{theorem}
+
+\section{tableaux}
+
+\begin{tabular}{|l|l|}
+\hline
+  \textbf{quantificateur} & \textbf{signification} \\
+  \hline
+  \hline
+   $\forall$ & Pour tout    \\
+   \hline
+  $\exists$ & Il existe     \\
+   \hline
+\end{tabular}
+\\
+\centering{Table 1 – Tableau de guillemets} \\
+\begin{tabular}{cccccc}
+\textbf{nom} & \textbf{anglais} & \textbf{utf8} & \textbf{code} \LaTeX & \textbf{rendu} \\
+\hline
+ simples guillemets & \textit{simple quotes} & ‘hey’ &
+\verb{`{ hey \verb{'{  & ‘hey’\\
+ doubles guillemets & \textit{double quotes} & “hey” &
+\verb{``{ hey \verb{''{ & “hey”\\
+ guillemets français & \textit{french quotes} & «hey» & \verb{ \og{ hey \verb{\fg{ & « hey » \\
+\end{tabular}
+
+\section{github}
+
+\centering{Table 1 – Tableau de GIT} \\
+\begin{tabular}{|l|c|}
+\hline
+\textbf{commande} & \textbf{utilité} \\
+\hline
+\hline
+ git add "fichier" & permet d'ajouter le fichier dans le git\\
+ git commit -m "message" & creer une version et ajouter un message\\
+ git status & affiche l'état de la version\\
+ git log & affiche la liste des versions\\
+ git init & demande a git de suivre le repertoire\\
+ git diff [fichier] & affiche les modification d'un fichier\\
+ rm -fr .git & supprimer le git\\
+ git config --global user.name/email  & modifier le nom de l'utilisateur\\
+ git commit --amend --reset-author --no-edit & appliquer les modif ci dessus\\
+ git push & envoyer l'update à git lab\\
+ git pull & recevoir l'update de git lab\\
+ git clone "url" & clone le git lab sur notre git\\
+ 
+ \hline
+\end{tabular}
+
+ on peut aussi creer un fichier .gitinit avec un *.aux pour ne pas prendre en compte les fichier .aux 
+ 
+\section{fontsize + creer des commandes custom}
+ 
+\fontsize{56}{1}\selectfont
+\textbf
+Je suis en police par défaut.\texttt{Je suis en police sans empattement.}\textsf{Je suis en police à
+chasse fixe.} \textrm{Je suis en police roman, explicitement.}
+\fontsize{1}{1}\selectfont
+\begin{itemize}
+
+\item 1. Je ne change la police par défaut. . .
+\ttfamily
+\item 2. . . . qu’à partir de maintenant, pour une police sans empattement. . .
+\item 3. . . . qui continue un petit moment. . .
+\item 4. . . . avant d’être finalement changée. . 
+\rmfamily
+\item 5. . . . pour la police par défaut. . .
+\sffamily
+\item 6. . . . puis pour la police à chasse fixe...
+\item 7. ... qui continue...
+\item 8. ... encore et encore, mais pas jusqu’au bout.
+\rmfamily
+\item Après la liste, je retrouve la police par défaut.
+\end{itemize}
+
+\ecole
+
+\texta tiny
+\textb scriptsize \textc footnotesize
+\textd small \texte normalsize
+\textf large \textg Large
+\texth LARGE \texti huge
+\textj Huge \normalsize – voilà mes différentes tailles.
+
+\strong{$ 1+1$}
+
+\textbf{
+$ \mathversion{bold} Attention, 2 + 2 = 2 \times 2mais3 + 3 \ne 3 \times 3.$}
+
+
+\textit{L’italique est différent du slanted.} 
+\textsl {Le slanted est différent du texte droit.}
+ \textup{Le texte
+droit est très clairement différent du texte en petites capitales.}
+
+\section{creer des liens colorées}
+
+\href{appelle}
+\ref{appelle}
+
+\sethlcolor{green}
+\hl{ h1}
+
+\surligne{le texte est en vert}
+
+\surligne{}{le texte est en de couleur de base}
+
+
+\begin{enumerate}
+
+
+
+\item  \mystyle[\bfseries\slshape]{maman - papa}
+\item \mystyle[\bfseries\slshape]{ \myname - frère - soeur}
+
+
+\end{enumerate}
+
+\textcolor{blue}{bleu} \textcolor{green}{vert} \textcolor{red}{rouge} \textcolor{gray}{gris}
+Ça, \mystyle[\bfseries\slshape]{c’est} \name{Cyprien}{Jullien} et il a du \mystyle[\scshape\large]{style} !
+
+
+\section[test]{lstisting + flottant et verbatim}
+
+
+\begin{enumerate}
+
+\item cloner! \ref{image1} petit 1\begin{lstlisting}
+git clone url depoB
+\end{lstlisting} 
+\label{image1}
+
+\item creer fichier tex
+\ref{image2}petit 2
+
+\item \begin{lstlisting}
+git touch correction.tex
+git commit -m "ajout d'un fichier"
+git push
+\end{lstlisting} 
+\label{image2}
+
+\item creer fichier .gitignore
+\ref{image3}petit 3
+\begin{lstlisting}
+
+touch .gitignore
+nano .gitignore
+
+\end{lstlisting} 
+ \label{image3}
+%% recherche d'une image dans le meme dossier \lstinputlisting[frame=single]{.gitignore}
+
+\item \item git status \ref{image4}petit 4
+\begin{lstlisting}
+git status
+\end{lstlisting} 
+\label{image4}
+\begin{figure}[h]
+%\includegraphics[scale=0.5]{cap.png}
+
+\item 
+
+\ref{image}image
+\caption{ceci est le git status \label{image}}
+\end{figure}
+\begin{lstlisting}
+git reponse suivante
+
+
+\end{lstlisting}
+\end{enumerate}
+
+
+
+\end{document}
